@@ -12,7 +12,7 @@
 
 </ion-header>
 
-<ion-content >
+<ion-content>
 
 
 <ion-list>
@@ -22,10 +22,10 @@
 		</ion-thumbnail>
 			<h2>{{board.brand}}</h2>
 			<p>DKK{{board.price}}</p>
-			<button ion-button clear item-right>View</button>
+		    <button ion-button clear item-right (click)="buyBoard(board)" >View</button>
 	</ion-item>
 </ion-list>
-
+{{ selectedBoard.brand }}
 
 <!-- <ion-list>
 	<ion-list-header>Boards</ion-list-header>
