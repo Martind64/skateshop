@@ -17,11 +17,11 @@
 <ion-list>
 	<ion-item *ngFor="let bearing of bearings">
 		<ion-thumbnail  item-left>
-			<img src="img/bearing.jpg">
+			<img src="{{bearing.imgPath}}">
 		</ion-thumbnail>
 			<h2>{{bearing.brand}}</h2>
 			<p>DKK{{bearing.price}}</p>
-			<button ion-button clear item-right>View</button>
+			<button ion-button clear item-right (click)="selectBearing(bearing)">View</button>
 	</ion-item>
 </ion-list>
 

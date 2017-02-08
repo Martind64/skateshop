@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Bearing } from '../../models/bearing';
+import { SingleBearingPage } from '../single-bearing/single-bearing';
 
 /*
   Generated class for the Bearings page.
@@ -24,9 +25,14 @@ export class BearingsPage {
   fillArray()
   {
 	// Push to bearings array
-	this.bearings.push(new Bearing("brand", "blue", 200));
-	this.bearings.push(new Bearing("brand1", "yellow", 400));
-	this.bearings.push(new Bearing("brand2", "white", 500));
+	this.bearings.push(new Bearing("brand", "This is a beautiful solid bearing!", 200, "img/bearing.jpg"));
+	this.bearings.push(new Bearing("brand1", "very expensive, but very good!", 400, "img/bearing.jpg"));
+	this.bearings.push(new Bearing("brand2", "This bearing has been built on an infinity stone.. it's extraordinary", 500, "img/bearing.jpg"));
+  }
+
+  selectBearing(bearing:Bearing)
+  {  
+    this.navCtrl.push(SingleBearingPage, bearing);
   }
 
 }

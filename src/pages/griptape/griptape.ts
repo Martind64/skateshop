@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Griptape } from '../../models/griptape';
+import { SingleGriptapePage } from '../single-griptape/single-griptape';
 
 /*
   Generated class for the Griptape page.
@@ -18,19 +19,19 @@ export class GriptapePage {
   	this.fillArray();
   }
   
-  public selectedGriptape:Griptape;
   public griptape:Array<Griptape> = [];
-
-
 
   fillArray()
   {
-	// Push to griptape array
-	this.griptape.push(new Griptape("blue", 199));
-	this.griptape.push(new Griptape("red", 199));
-	this.griptape.push(new Griptape("grey", 149));
-	this.selectedGriptape = new Griptape("", 0);
-
+  	// Push to griptape array
+  	this.griptape.push(new Griptape("Stronk","This griptape really isn't all that stronk", 199, "img/griptape.jpg"));
+  	this.griptape.push(new Griptape("Hotsen","Griptape from hotsen, very dark, very cold", 199, "img/griptape.jpg"));
+  	this.griptape.push(new Griptape("Usn","This griptape is spectular, very good for the price!", 149, "img/griptape.jpg"));
   }
+
+  selectGriptape(griptape:Griptape)
+  {
+    this.navCtrl.push(SingleGriptapePage, griptape);
+  }  
 
 }

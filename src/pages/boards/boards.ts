@@ -20,7 +20,6 @@ export class BoardsPage {
   }
 
   public boards:Array<Board> = [];
-  public selectedBoard:Board;
   
   fillArray()
   {

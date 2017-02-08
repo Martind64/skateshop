@@ -1,10 +1,14 @@
 export class Griptape{
-	color: string;
+	brand: string;
+	description: string;
 	price:number;
+	imgPath:string;
 
-	constructor(Color:string, Price:number)
+	constructor(Brand:string, Description: string, Price:number, ImgPath:string)
 	{
-		this.color = Color;
+		this.brand = Brand;
+		this.description = Description;
 		this.price = Price;
+		this.imgPath = ImgPath;
 	}
 }

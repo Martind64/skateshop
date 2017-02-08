@@ -16,11 +16,11 @@
 <ion-list>
   <ion-item *ngFor="let gripTape of griptape">
     <ion-thumbnail  item-left>
-      <img src="img/griptape.jpg">
+      <img src="{{gripTape.imgPath}}">
     </ion-thumbnail>
       <h2>{{gripTape.brand}}</h2>
       <p>DKK{{gripTape.price}}</p>
-      <button ion-button clear item-right>View</button>
+      <button ion-button clear item-right (click)="selectGriptape(gripTape)">View</button>
   </ion-item>
 </ion-list>
 
