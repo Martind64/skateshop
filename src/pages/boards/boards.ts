@@ -21,7 +21,6 @@ export class BoardsPage {
 
   public boards:Array<Board> = [];
   public selectedBoard:Board;
-  public aBoard = new Board("Sanchi", "Dark grey", 12.4, 699);
   
   fillArray()
   {

@@ -29,7 +29,6 @@ export class HomePage {
 
 
   skateboard:Skateboard;
-  // selectedBoard:Board = this.navParams.get('id');
 
 
   boardsPage()
