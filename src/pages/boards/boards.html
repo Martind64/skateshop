@@ -1,0 +1,39 @@
+<!--
+  Generated template for the Boards page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>List of boards</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content >
+
+
+<ion-list>
+	<ion-item *ngFor="let board of boards">
+		<ion-thumbnail  item-left>
+			<img src="img/board.jpg">
+		</ion-thumbnail>
+			<h2>{{board.brand}}</h2>
+			<p>DKK{{board.price}}</p>
+			<button ion-button clear item-right>View</button>
+	</ion-item>
+</ion-list>
+
+
+<!-- <ion-list>
+	<ion-list-header>Boards</ion-list-header>
+	<ion-item *ngFor="let board of boards">
+		{{board.brand}}
+		{{board.color}}
+		{{board.size}}
+		<div>DKK{{board.price}}</div>
+	</ion-item>
+</ion-list> -->
+</ion-content>

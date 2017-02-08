@@ -1,0 +1,120 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Products
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+<ion-grid>
+	
+	<ion-row>
+		<ion-col>
+			<ion-card (click)="boardsPage()" >
+			    <img src="img/board.jpg">
+			    <div class="card-title">Boards</div>
+			  </ion-card>
+		</ion-col>
+
+		<ion-col>
+		  <ion-card (click)="wheelsPage()" >
+		  	<img src="img/wheels.jpg">
+		  	<div class="card-title">Wheels</div>
+		  </ion-card>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col>
+			<ion-card (click)="griptapePage()">
+			    <img src="img/griptape.jpg">
+			    <div class="card-title">Griptape</div>
+			  </ion-card>
+		</ion-col>
+
+		<ion-col>
+		  <ion-card (click)="bearingsPage()">
+		  	<img src="img/bearing.jpg">
+		  	<div class="card-title">Bearings</div>
+		  </ion-card>
+		</ion-col>
+
+	</ion-row>
+		<ion-row>
+
+		<ion-col width-50>
+		  <ion-card (click)="trucksPage()">
+		  	<img src="img/truck.jpg">
+		  	<div class="card-title">Trucks</div>
+		  </ion-card>
+		</ion-col>
+	</ion-row>
+</ion-grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ion-content>
+<!-- Complete the "skateshop" so that the buyer can choose trucks, griptape, wheels and bearings.. -->
+<!-- <ion-item>
+	<ion-label>Pick board</ion-label>
+	<ion-select [(ngModel)]="selectedBoard">
+		<ion-option *ngFor="let board of boards" [value]="board">{{board.brand}}</ion-option>
+	</ion-select>
+</ion-item>
+
+<ion-item>
+	<ion-label>Pick truck</ion-label>
+	<ion-select [(ngModel)]="selectedTruck">
+		<ion-option *ngFor="let truck of trucks" [value]="truck">{{truck.model}}</ion-option>
+	</ion-select>
+</ion-item>
+
+<ion-item>
+	<ion-label>Pick griptape</ion-label>
+	<ion-select [(ngModel)]="selectedGriptape">
+		<ion-option *ngFor="let gripTape of griptape" [value]="gripTape">{{gripTape.color}}</ion-option>
+	</ion-select>
+</ion-item>
+
+<ion-item>
+	<ion-label>Pick Wheels</ion-label>
+	<ion-select [(ngModel)]="selectedWheels">
+		<ion-option *ngFor="let wheel of wheels" [value]="wheel">{{wheel.price}}</ion-option>
+	</ion-select>
+</ion-item> -->
+<!-- 
+<ion-item>
+	<ion-label>pick bearings</ion-label>
+	<ion-select [(ngModel)]="selectedBearing">
+		<ion-option *ngFor="let bearing of bearings" [value]="bearing">{{bearing.price}}</ion-option>
+	</ion-select>
+</ion-item> -->
+
+<!-- <ion-label>Board:</ion-label>
+{{selectedBoard.brand}}
+<ion-label>Truck:</ion-label>
+{{selectedTruck.model}}
+<ion-label>Griptape:</ion-label>
+{{selectedGriptape.color}}
+<ion-label>Wheels:</ion-label>
+{{selectedWheels.price}}
+<ion-label>Bearings:</ion-label>
+{{selectedBearing.price}}
+ -->

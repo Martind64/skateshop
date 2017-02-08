@@ -1,0 +1,37 @@
+<!--
+  Generated template for the Wheels page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Trucks</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+
+<ion-list>
+	<ion-item *ngFor="let truck of trucks">
+		<ion-thumbnail  item-left>
+			<img src="img/truck.jpg">
+		</ion-thumbnail>
+			<h2>{{truck.brand}}</h2>
+			<p>DKK{{truck.price}}</p>
+			<button ion-button clear item-right>View</button>
+	</ion-item>
+</ion-list>
+
+<!-- <ion-list>
+	<ion-list-header>Trucks</ion-list-header>
+	<ion-item *ngFor="let truck of trucks">
+		{{truck.model}}
+		{{truck.length}}INCH
+		<div>DKK{{truck.price}}</div>
+	</ion-item>
+</ion-list> -->
+
+
+</ion-content>

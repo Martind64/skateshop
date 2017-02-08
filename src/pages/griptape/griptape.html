@@ -1,0 +1,35 @@
+<!--
+  Generated template for the Wheels page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Griptape</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content >
+
+<ion-list>
+  <ion-item *ngFor="let gripTape of griptape">
+    <ion-thumbnail  item-left>
+      <img src="img/griptape.jpg">
+    </ion-thumbnail>
+      <h2>{{gripTape.brand}}</h2>
+      <p>DKK{{gripTape.price}}</p>
+      <button ion-button clear item-right>View</button>
+  </ion-item>
+</ion-list>
+
+<!-- <ion-list>
+  <ion-list-header>Griptape</ion-list-header>
+  <ion-item *ngFor="let gripTape of griptape">
+    {{gripTape.color}}
+    <div>DKK{{gripTape.price}}</div>
+  </ion-item>
+</ion-list> -->
+
+</ion-content>
