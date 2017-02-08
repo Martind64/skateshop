@@ -16,11 +16,11 @@
 <ion-list>
 	<ion-item *ngFor="let wheel of wheels">
 		<ion-thumbnail  item-left>
-			<img src="img/wheels.jpg">
+			<img src="{{wheel.imgPath}}">
 		</ion-thumbnail>
 			<h2>{{wheel.brand}}</h2>
 			<p>DKK{{wheel.price}}</p>
-			<button ion-button clear item-right>View</button>
+			<button ion-button clear item-right (click)="selectWheel(wheel)">View</button>
 	</ion-item>
 </ion-list>
 <!-- 

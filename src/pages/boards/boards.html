@@ -18,14 +18,14 @@
 <ion-list>
 	<ion-item *ngFor="let board of boards">
 		<ion-thumbnail  item-left>
-			<img src="img/board.jpg">
+			<img src="{{board.imgPath}}">
 		</ion-thumbnail>
 			<h2>{{board.brand}}</h2>
 			<p>DKK{{board.price}}</p>
-		    <button ion-button clear item-right (click)="buyBoard(board)" >View</button>
+		    <button ion-button clear item-right (click)="selectBoard(board)" >View</button>
 	</ion-item>
 </ion-list>
-{{ selectedBoard.brand }}
+{{ selectedBoard?.brand }}
 
 <!-- <ion-list>
 	<ion-list-header>Boards</ion-list-header>

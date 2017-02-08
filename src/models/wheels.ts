@@ -1,15 +1,17 @@
 export class Wheels{
 	brand:string;
+	description:string;
+	imgPath:string;
 	size:number;
-	color: string;
 	price:number;
 
-	constructor(Brand:string, Size:number, Color:string, Price: number)
+	constructor(Brand:string, Description:string, Size:number, Price: number, ImgPath:string)
 	{
 		this.brand = Brand;
+		this.description = Description;
 		this.size = Size;
-		this.color = Color;
 		this.price = Price;
+		this.imgPath = ImgPath;
 	}
 
 }

@@ -7,6 +7,8 @@ import { WheelsPage } from '../pages/wheels/wheels';
 import { TrucksPage } from '../pages/trucks/trucks';
 import { BearingsPage } from '../pages/bearings/bearings';
 import { GriptapePage } from '../pages/griptape/griptape';
+import { SingleBoardPage } from '../pages/single-board/single-board';
+import { SingleWheelPage } from '../pages/single-wheel/single-wheel';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { GriptapePage } from '../pages/griptape/griptape';
     WheelsPage,
     TrucksPage,
     BearingsPage,
-    GriptapePage
+    GriptapePage,
+    SingleBoardPage,
+    SingleWheelPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -30,7 +34,9 @@ import { GriptapePage } from '../pages/griptape/griptape';
     WheelsPage,
     TrucksPage,
     BearingsPage,
-    GriptapePage
+    GriptapePage,
+    SingleBoardPage,
+    SingleWheelPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

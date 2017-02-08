@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Board } from '../../models/board';
-import { HomePage } from '../home/home';
+import { SingleBoardPage } from '../single-board/single-board';
 
 /*
   Generated class for the Boards page.
@@ -24,16 +24,15 @@ export class BoardsPage {
   
   fillArray()
   {
-    	this.boards.push(new Board("Extreme", "blue", 8.4, 499));
-    	this.boards.push(new Board("Delkra", "redhot", 10.4, 599));
-    	this.boards.push(new Board("Sanchi", "Dark grey", 12.4, 699));
+    	this.boards.push(new Board("Extreme","An amazing board filled with awesome!", 8.4, 499, "img/board.jpg"));
+    	this.boards.push(new Board("Delkra","A board made of quality material!",  10.4, 599, "img/board.jpg"));
+    	this.boards.push(new Board("Sanchi","This board has been owned by none other than Martin Delfs!", 12.4, 699, "img/board.jpg"));
 
-      this.selectedBoard = new Board("Brand", "", 0, 0);  
   }
 
-  buyBoard(board:Board)
+  selectBoard(board:Board)
   {
-    this.navCtrl.push(HomePage, board);
+    this.navCtrl.push(SingleBoardPage, board);
   }
 
  

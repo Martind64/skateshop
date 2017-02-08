@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Wheels } from '../../models/wheels';
+import { SingleWheelPage } from '../single-wheel/single-wheel';
 
 /*
   Generated class for the Wheels page.
@@ -24,12 +25,14 @@ export class WheelsPage {
  fillArray()
  {
     	// Push to wheels array
-    	this.wheels.push(new Wheels("Mega Wheels", 3, "blue", 199));
-    	this.wheels.push(new Wheels("super Wheels", 4, "red", 450));
-    	this.wheels.push(new Wheels("Master Wheels", 5, "black", 600	));
+    	this.wheels.push(new Wheels("Mega Wheels", "Rolls over the ground like a hot knife through butter", 3, 199, "img/wheels.jpg"));
+    	this.wheels.push(new Wheels("super Wheels", "Might be the best ones for the price, these gorgeous wheels will blow your mind!", 4, 450, "img/wheels.jpg"));
+    	this.wheels.push(new Wheels("Master Wheels", "You can't get any better than this. Expensive but sure worth it, now that's value!", 5  , 600, "img/wheels.jpg"));
+ }
 
-    	this.selectedWheels = new Wheels("", 0, "", 0);
-
+ selectWheel(wheel:Wheels)
+ {
+   this.navCtrl.push(SingleWheelPage, wheel);
  }
 
 }
