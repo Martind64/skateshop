@@ -25,9 +25,9 @@ export class BearingsPage {
   fillArray()
   {
 	// Push to bearings array
-	this.bearings.push(new Bearing("brand", "This is a beautiful solid bearing!", 200, "img/bearing.jpg"));
-	this.bearings.push(new Bearing("brand1", "very expensive, but very good!", 400, "img/bearing.jpg"));
-	this.bearings.push(new Bearing("brand2", "This bearing has been built on an infinity stone.. it's extraordinary", 500, "img/bearing.jpg"));
+	this.bearings.push(new Bearing("Windsoe", "This is a beautiful solid bearing!", 200, "img/bearing.jpg"));
+	this.bearings.push(new Bearing("Dyna", "very expensive, but very good!", 400, "img/bearing.jpg"));
+	this.bearings.push(new Bearing("Jericho", "This bearing has been built on an infinity stone.. it's extraordinary", 500, "img/bearing.jpg"));
   }
 
   selectBearing(bearing:Bearing)

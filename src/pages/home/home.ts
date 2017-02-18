@@ -17,7 +17,12 @@ export class HomePage {
   constructor(private navCtrl: NavController, public navParams: NavParams) {
   }  
   
+  // Test navParam by printing brands in html
+  public boardDescription = sessionStorage.getItem('boardDescription');
+  public secondBrand = sessionStorage.getItem('boardBrand');
 
+
+  public board = this.navParams.get('board');
 
   skateboard:Skateboard;
 
