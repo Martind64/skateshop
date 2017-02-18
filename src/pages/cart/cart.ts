@@ -27,4 +27,46 @@ export class CartPage {
   public bearing = JSON.parse(sessionStorage.getItem('bearing'));
   public truck = JSON.parse(sessionStorage.getItem('truck'));
 
+  public finalPrice = this.totalPrice();
+
+  totalPrice()
+  {
+    let sum:number;
+    if(this.board) {
+        let boardPrice = this.board.price;
+        if(sum == null) {
+          sum = this.board.price
+        }
+        else
+        sum += boardPrice;
+    }
+    if(this.wheel) {
+        if(sum == null) {
+          sum = this.wheel.price;
+        }
+        else
+        sum += this.wheel.price;
+    }
+    if(this.griptape) {
+      if(sum == null) {
+        sum = this.griptape.price
+      }
+      else
+       sum += this.griptape.price;
+    }
+    if(this.bearing) {
+      if(sum == null) {
+        sum = this.bearing.price;
+      }
+      else
+       sum += this.bearing.price;
+    }
+    if(this.truck) {
+      if(sum == null) {
+        sum = this.truck.price;
+      }
+       sum += this.truck.price;
+    }
+    return sum;
+  }
 }
