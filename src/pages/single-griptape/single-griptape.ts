@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 /*
   Generated class for the SingleGriptape page.
@@ -19,6 +20,15 @@ export class SingleGriptapePage {
   public description = this.navParams.get('description');
   public imgPath = this.navParams.get('imgPath');
   public price = this.navParams.get('price');
+
+  buyGriptape()
+  {
+    sessionStorage.setItem('griptapeBrand', this.brand);
+    sessionStorage.setItem('griptapeSize', this.description);
+    sessionStorage.setItem('griptapeImgPath', this.imgPath);
+    sessionStorage.setItem('griptapePrice', this.price);
+    this.navCtrl.push(HomePage);
+  }
   
 
 }

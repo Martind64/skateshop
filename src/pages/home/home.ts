@@ -18,8 +18,11 @@ export class HomePage {
   }  
   
   // Test navParam by printing brands in html
-  public boardDescription = sessionStorage.getItem('boardDescription');
-  public secondBrand = sessionStorage.getItem('boardBrand');
+  public bPrice = sessionStorage.getItem('boardPrice');
+  public wPrice = sessionStorage.getItem('wheelPrice');
+  public gPrice = sessionStorage.getItem('griptapePrice');
+  public bearingPrice = sessionStorage.getItem('bearingPrice');
+
 
 
   public board = this.navParams.get('board');

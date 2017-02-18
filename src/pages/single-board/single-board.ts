@@ -31,7 +31,7 @@ export class SingleBoardPage {
     sessionStorage.setItem('boardDescription', this.description);
     sessionStorage.setItem('boardSize', this.size);
     sessionStorage.setItem('bardImgPath', this.imgPath);
-    sessionStorage.setItem('boardPrize', this.price);
+    sessionStorage.setItem('boardPrice', this.price);
     this.navCtrl.push(HomePage);
   }
 
