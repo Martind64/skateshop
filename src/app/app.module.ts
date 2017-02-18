@@ -12,6 +12,7 @@ import { SingleWheelPage } from '../pages/single-wheel/single-wheel';
 import { SingleGriptapePage } from '../pages/single-griptape/single-griptape';
 import { SingleBearingPage } from '../pages/single-bearing/single-bearing';
 import { SingleTruckPage } from '../pages/single-truck/single-truck';
+import { CartPage } from '../pages/cart/cart';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { SingleTruckPage } from '../pages/single-truck/single-truck';
     SingleWheelPage,
     SingleGriptapePage,
     SingleBearingPage,
-    SingleTruckPage
+    SingleTruckPage,
+    CartPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -45,7 +47,8 @@ import { SingleTruckPage } from '../pages/single-truck/single-truck';
     SingleWheelPage,
     SingleGriptapePage,
     SingleBearingPage,
-    SingleTruckPage
+    SingleTruckPage,
+    CartPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

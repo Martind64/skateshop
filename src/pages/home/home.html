@@ -12,14 +12,14 @@
 	
 	<ion-row>
 		<ion-col>
-			<ion-card (click)="boardsPage()" >
+			<ion-card [navPush]="boardsPage">
 			    <img src="img/board.jpg">
 			    <div class="card-title">Boards</div>
 			  </ion-card>
 		</ion-col>
 
 		<ion-col>
-		  <ion-card (click)="wheelsPage()" >
+		  <ion-card [navPush]="wheelsPage">
 		  	<img src="img/wheels.jpg">
 		  	<div class="card-title">Wheels</div>
 		  </ion-card>
@@ -27,14 +27,14 @@
 	</ion-row>
 	<ion-row>
 		<ion-col>
-			<ion-card (click)="griptapePage()">
+			<ion-card [navPush]="griptapePage" >
 			    <img src="img/griptape.jpg">
 			    <div class="card-title">Griptape</div>
 			  </ion-card>
 		</ion-col>
 
 		<ion-col>
-		  <ion-card (click)="bearingsPage()">
+		  <ion-card [navPush]="bearingsPage" >
 		  	<img src="img/bearing.jpg">
 		  	<div class="card-title">Bearings</div>
 		  </ion-card>
@@ -44,25 +44,20 @@
 		<ion-row>
 
 		<ion-col width-50>
-		  <ion-card (click)="trucksPage()">
+		  <ion-card [navPush]="trucksPage">
 		  	<img src="img/truck.jpg">
-		  	<div class="card-title">Trucks</div>
+		  	<div  class="card-title">Trucks</div>
 		  </ion-card>
 		</ion-col>
-
-			<ion-col width-50>
-		  <ion-card>
-		  	<img src="img/cart3.png">
+			<ion-col width-50 *ngIf="board || wheel || griptape || bearing || truck">
+		  <ion-card [navPush]="cartPage">
+		  	<img src="img/cart.png">
 		  	<div class="card-title"></div>
 		  </ion-card>
 		</ion-col>
 	</ion-row>
 </ion-grid>
-{{ board?.price }}
-{{ wheel?.price }}
-{{ griptape?.price }}
-{{ bearing?.price }}
-{{ truck?.price }}
+
 
 
 

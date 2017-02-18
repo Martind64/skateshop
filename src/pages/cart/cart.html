@@ -13,6 +13,45 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+
+<ion-list>
+	<ion-item *ngIf="board">
+		<ion-thumbnail  item-left>
+			<img src="{{board?.imgPath}}">
+		</ion-thumbnail>
+			<h2>{{board?.brand}}</h2>
+			<p item-right>DKK{{board?.price}}</p>
+	</ion-item>
+	<ion-item *ngIf="wheel">
+		<ion-thumbnail item-left>
+			<img src="{{wheel?.imgPath}}">
+		</ion-thumbnail>
+			<h2>{{wheel?.brand}}</h2>
+			<p item-right>DKK{{wheel?.price}}</p>
+	</ion-item>
+	<ion-item *ngIf="griptape">
+		<ion-thumbnail  item-left>
+			<img src="{{griptape?.imgPath}}">
+		</ion-thumbnail>
+			<h2>{{griptape?.brand}}</h2>
+			<p item-right>DKK{{griptape?.price}}</p>
+	</ion-item>
+	<ion-item *ngIf="bearing">
+		<ion-thumbnail item-left>
+			<img src="{{bearing?.imgPath}}">
+		</ion-thumbnail>
+			<h2>{{bearing?.brand}}</h2>
+			<p item-right>DKK{{bearing?.price}}</p>
+	</ion-item>
+	<ion-item *ngIf="truck">
+		<ion-thumbnail  item-left>
+			<img src="{{truck?.imgPath}}">
+		</ion-thumbnail>
+			<h2>{{truck?.brand}}</h2>
+			<p item-right>DKK{{truck?.price}}</p>
+	</ion-item>
+</ion-list>
+
 
 </ion-content>

@@ -13,10 +13,18 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class CartPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CartPage');
   }
+
+	// Get sessionsstorage and make and object from the string
+  public board = JSON.parse(sessionStorage.getItem('board'));
+  public wheel = JSON.parse(sessionStorage.getItem('wheel'));
+  public griptape = JSON.parse(sessionStorage.getItem('griptape'));
+  public bearing = JSON.parse(sessionStorage.getItem('bearing'));
+  public truck = JSON.parse(sessionStorage.getItem('truck'));
 
 }
