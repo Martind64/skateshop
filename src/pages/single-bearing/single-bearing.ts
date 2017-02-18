@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { Bearing } from '../../models/bearing';
 
 /*
   Generated class for the SingleBearing page.
@@ -19,17 +20,14 @@ export class SingleBearingPage {
 
   public brand = this.navParams.get('brand');
   public description = this.navParams.get('description');
-  public imgPath = this.navParams.get('imgPath');
   public price = this.navParams.get('price');
+  public imgPath = this.navParams.get('imgPath');
 
+  public bearing = new Bearing(this.brand, this.description, this.price, this.imgPath);
 
-
-    buyBearing()
+  buyBearing()
   {
-    sessionStorage.setItem('bearingBrand', this.brand);
-    sessionStorage.setItem('bearingDescription', this.description);
-    sessionStorage.setItem('bearingimgPath', this.imgPath);
-    sessionStorage.setItem('bearingPrice', this.price);
+    sessionStorage.setItem('bearing', JSON.stringify(this.bearing));
     this.navCtrl.push(HomePage);
   }
 }

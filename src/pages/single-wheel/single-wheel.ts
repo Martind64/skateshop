@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { Wheels } from '../../models/wheels';
 
 /*
   Generated class for the SingleWheel page.
@@ -19,17 +20,15 @@ export class SingleWheelPage {
   public brand = this.navParams.get('brand');
   public description = this.navParams.get('description');
   public size = this.navParams.get('size');
-  public imgPath = this.navParams.get('imgPath');
   public price = this.navParams.get('price');
+  public imgPath = this.navParams.get('imgPath');
+
+  public wheel = new Wheels(this.brand, this.description, this.size, this.price, this.imgPath)
 
 
   buyWheel()
   {
-    sessionStorage.setItem('wheelBrand', this.brand);
-    sessionStorage.setItem('wheelDescription', this.description);
-    sessionStorage.setItem('wheelSize', this.size);
-    sessionStorage.setItem('wheelImgPath', this.imgPath);
-    sessionStorage.setItem('wheelPrice', this.price);
+    sessionStorage.setItem('wheel', JSON.stringify(this.wheel));
     this.navCtrl.push(HomePage);
   }
 

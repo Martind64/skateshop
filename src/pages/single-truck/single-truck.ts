@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { HomePage } from '../home/home';
+import { Truck } from '../../models/truck';
+
 
 /*
   Generated class for the SingleTruck page.
@@ -20,6 +23,14 @@ export class SingleTruckPage {
   public length = this.navParams.get('length');
   public imgPath = this.navParams.get('imgPath');
   public price = this.navParams.get('price');
+
+  public truck = new Truck(this.brand, this.description, this.length, this.price, this.imgPath);
+
+  buyTruck()
+  {
+    sessionStorage.setItem('truck', JSON.stringify(this.truck));
+    this.navCtrl.push(HomePage);
+  }
 
 
 }

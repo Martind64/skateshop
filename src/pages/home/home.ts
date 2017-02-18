@@ -17,15 +17,13 @@ export class HomePage {
   constructor(private navCtrl: NavController, public navParams: NavParams) {
   }  
   
-  // Test navParam by printing brands in html
-  public bPrice = sessionStorage.getItem('boardPrice');
-  public wPrice = sessionStorage.getItem('wheelPrice');
-  public gPrice = sessionStorage.getItem('griptapePrice');
-  public bearingPrice = sessionStorage.getItem('bearingPrice');
+  // Get sessionsstorage and make it in object
+  public board = JSON.parse(sessionStorage.getItem('board'));
+  public wheel = JSON.parse(sessionStorage.getItem('wheel'));
+  public griptape = JSON.parse(sessionStorage.getItem('griptape'));
+  public bearing = JSON.parse(sessionStorage.getItem('bearing'));
+  public truck = JSON.parse(sessionStorage.getItem('truck'));
 
-
-
-  public board = this.navParams.get('board');
 
   skateboard:Skateboard;
 

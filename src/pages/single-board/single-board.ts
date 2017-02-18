@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { Board } from '../../models/board';
 
 /*
   Generated class for the SingleBoard page.
@@ -21,17 +22,13 @@ export class SingleBoardPage {
   public brand = this.navParams.get('brand');
   public description = this.navParams.get('description');
   public size = this.navParams.get('size');
-  public imgPath = this.navParams.get('imgPath');
   public price = this.navParams.get('price');
+  public imgPath = this.navParams.get('imgPath');
 
-
+  public board = new Board(this.brand, this.description ,this.size, this.price, this.imgPath);
   buyBoard()
   {
-    sessionStorage.setItem('boardBrand', this.brand);
-    sessionStorage.setItem('boardDescription', this.description);
-    sessionStorage.setItem('boardSize', this.size);
-    sessionStorage.setItem('bardImgPath', this.imgPath);
-    sessionStorage.setItem('boardPrice', this.price);
+    sessionStorage.setItem('board', JSON.stringify(this.board));
     this.navCtrl.push(HomePage);
   }
 
