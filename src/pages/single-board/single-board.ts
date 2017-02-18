@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { Board } from '../../models/board';
 
@@ -15,7 +15,7 @@ import { Board } from '../../models/board';
 })
 export class SingleBoardPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
 
   }
 
@@ -29,7 +29,19 @@ export class SingleBoardPage {
   buyBoard()
   {
     sessionStorage.setItem('board', JSON.stringify(this.board));
-    this.navCtrl.push(HomePage);
+    let alert = this.alertCtrl.create({
+      title: 'Board selected',
+      subTitle: this.brand + " has been added to your cart",
+      buttons: [
+      {
+        text: 'OK',
+        handler: () => {
+        this.navCtrl.push(HomePage);
+        },
+        
+      }]
+    })
+    alert.present();
   }
 
 }
