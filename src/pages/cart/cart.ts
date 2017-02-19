@@ -16,10 +16,6 @@ export class CartPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CartPage');
-  }
-
 	// Get sessionsstorage and make and object from the string
   public board = JSON.parse(sessionStorage.getItem('board'));
   public wheel = JSON.parse(sessionStorage.getItem('wheel'));
@@ -29,42 +25,26 @@ export class CartPage {
 
   public finalPrice = this.totalPrice();
 
+
+
+
+  // Get the total price of the shopping cart
   totalPrice()
   {
-    let sum:number;
+    let sum:number = 0;
     if(this.board) {
-        let boardPrice = this.board.price;
-        if(sum == null) {
-          sum = this.board.price
-        }
-        else
-        sum += boardPrice;
+        sum += this.board.price;
     }
     if(this.wheel) {
-        if(sum == null) {
-          sum = this.wheel.price;
-        }
-        else
         sum += this.wheel.price;
     }
     if(this.griptape) {
-      if(sum == null) {
-        sum = this.griptape.price
-      }
-      else
        sum += this.griptape.price;
     }
     if(this.bearing) {
-      if(sum == null) {
-        sum = this.bearing.price;
-      }
-      else
        sum += this.bearing.price;
     }
     if(this.truck) {
-      if(sum == null) {
-        sum = this.truck.price;
-      }
        sum += this.truck.price;
     }
     return sum;
