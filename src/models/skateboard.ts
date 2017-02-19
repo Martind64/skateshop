@@ -10,16 +10,14 @@ export class Skateboard{
 	bearing:Bearing;
 	truck:Truck;
 	griptape:Griptape;
-	imgPath:string;
 
-	constructor(Board:Board, Wheels:Wheels, Bearing:Bearing, Truck:Truck, Griptape:Griptape, ImgPath:string)
+	constructor(Board:Board, Wheels:Wheels, Bearing:Bearing, Truck:Truck, Griptape:Griptape)
 	{
 		this.board = Board;
 		this.wheels = Wheels;
 		this.bearing = Bearing;
 		this.truck = Truck;
 		this.griptape = Griptape;
-		this.imgPath = ImgPath;
 	}
 
 }

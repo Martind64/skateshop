@@ -30,12 +30,12 @@
 			<h2>{{wheel?.brand}}</h2>
 			<p item-right>{{wheel?.price}} DKK</p>
 	</ion-item>
-	<ion-item *ngIf="griptape">
+	<ion-item *ngIf="gripTape">
 		<ion-thumbnail  item-left>
-			<img src="{{griptape?.imgPath}}">
+			<img src="{{gripTape?.imgPath}}">
 		</ion-thumbnail>
-			<h2>{{griptape?.brand}}</h2>
-			<p item-right>{{griptape?.price}} DKK</p>
+			<h2>{{gripTape?.brand}}</h2>
+			<p item-right>{{gripTape?.price}} DKK</p>
 	</ion-item>
 	<ion-item *ngIf="bearing">
 		<ion-thumbnail item-left>
@@ -57,7 +57,7 @@
 	</ion-item>
 </ion-list>
 <div  class="buy">
-	<button ion-button block>Buy</button>
+	<button ion-button block (click)="buy()">Buy</button>
 </div>
 
 
