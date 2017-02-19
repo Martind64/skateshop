@@ -34,8 +34,9 @@ export class SingleGriptapePage {
       buttons: [
       {
         text: 'OK',
+        role: 'cancel',
         handler: () => {
-        this.navCtrl.push(HomePage);
+        this.navCtrl.setRoot(HomePage);
         },
         
       }]

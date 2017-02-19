@@ -35,10 +35,11 @@ export class SingleBoardPage {
       buttons: [
       {
         text: 'OK',
+        role: 'cancel',
         handler: () => {
-        this.navCtrl.push(HomePage);
+        this.navCtrl.setRoot(HomePage);
         },
-        
+
       }]
     })
     alert.present();
