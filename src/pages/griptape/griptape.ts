@@ -26,7 +26,7 @@ export class GriptapePage {
   	// Push to griptape array
   	this.griptape.push(new Griptape("Stronk","This griptape really isn't all that stronk", 199, "img/griptape.jpg"));
   	this.griptape.push(new Griptape("Hotsen","Griptape from hotsen, very dark, very cold", 170, "img/griptape.jpg"));
-  	this.griptape.push(new Griptape("Usn","This griptape is spectular, very good for the price!", 149, "img/griptape.jpg"));
+  	this.griptape.push(new Griptape("Usn","This griptape is spectacular, very good for the price!", 149, "img/griptape.jpg"));
   }
 
   selectGriptape(griptape:Griptape)
