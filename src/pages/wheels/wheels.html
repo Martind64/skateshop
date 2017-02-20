@@ -14,13 +14,13 @@
 <ion-content >
 
 <ion-list>
-	<ion-item *ngFor="let wheel of wheels">
+	<ion-item (click)="selectWheel(wheel)" *ngFor="let wheel of wheels">
 		<ion-thumbnail  item-left>
 			<img src="{{wheel.imgPath}}">
 		</ion-thumbnail>
 			<h2>{{wheel.brand}}</h2>
 			<p>{{wheel.price}} DKK</p>
-			<button ion-button clear item-right (click)="selectWheel(wheel)">View</button>
+			<button ion-button clear item-right>View</button>
 	</ion-item>
 </ion-list>
 

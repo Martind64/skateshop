@@ -14,13 +14,13 @@
 <ion-content>
 
 <ion-list>
-	<ion-item *ngFor="let truck of trucks">
+	<ion-item (click)="selectTruck(truck)" *ngFor="let truck of trucks">
 		<ion-thumbnail  item-left>
 			<img src="{{truck.imgPath}}">
 		</ion-thumbnail>
 			<h2>{{truck.brand}}</h2>
 			<p>{{truck.price}} DKK</p>
-			<button ion-button clear item-right (click)="selectTruck(truck)">View</button>
+			<button ion-button clear item-right>View</button>
 	</ion-item>
 </ion-list>
 

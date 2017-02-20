@@ -11,18 +11,16 @@
   </ion-navbar>
 
 </ion-header>
-
 <ion-content>
 
-
 <ion-list>
-	<ion-item *ngFor="let board of boards">
+	<ion-item (click)="selectBoard(board)" *ngFor="let board of boards">
 		<ion-thumbnail  item-left>
 			<img src="{{board.imgPath}}">
 		</ion-thumbnail>
 			<h2>{{board.brand}}</h2>
 			<p>{{board.price}} DKK</p>
-		    <button ion-button clear item-right (click)="selectBoard(board)" >View</button>
+		    <button ion-button clear item-right>View</button>
 	</ion-item>
 </ion-list>
 
