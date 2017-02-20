@@ -16,7 +16,30 @@
 <ion-content>
 
 <ion-list>
-	<ion-item *ngIf="board">
+	<ion-item *ngFor="let value of cart">
+		<ion-thumbnail  item-left>
+			<img src="{{value?.item?.imgPath}}">
+		</ion-thumbnail>
+			<h2>{{value?.item?.brand}}</h2>
+			<p item-right>{{value?.item?.price}}DKK</p>
+	</ion-item>
+	<ion-item>
+		<p item-right>Total</p>
+		<p item-right>{{finalPrice}} DKK</p>
+	</ion-item>
+</ion-list>
+
+
+
+<div  class="buy">
+	<button ion-button block (click)="buy()">Buy</button>
+</div>
+
+
+</ion-content>
+
+<!--  OLD SHOPPING CART    -->
+<!-- 	<ion-item *ngIf="board">
 		<ion-thumbnail  item-left>
 			<img src="{{board?.imgPath}}">
 		</ion-thumbnail>
@@ -51,14 +74,4 @@
 			<h2>{{truck?.brand}}</h2>
 			<p item-right>{{truck?.price}} DKK</p>
 	</ion-item>
-	<ion-item>
-		<p item-right>Total</p>
-		<p item-right>{{finalPrice}} DKK</p>
-	</ion-item>
-</ion-list>
-<div  class="buy">
-	<button ion-button block (click)="buy()">Buy</button>
-</div>
-
-
-</ion-content>
+ -->

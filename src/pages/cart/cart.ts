@@ -16,6 +16,8 @@ import { HomePage } from '../home/home';
 export class CartPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+    this.createCart();
+    console.log(this.cart);
   }
 
 	// Get sessionsstorage and make and object from the string
@@ -30,6 +32,29 @@ export class CartPage {
 
   // Create a skateboard object consisting of all the other objects
   public skateboard = new Skateboard(this.board, this.wheel, this.bearing, this.truck, this.gripTape);
+
+  // Cart array
+  public cart:{item:Object}[] = [];
+
+
+  createCart()
+  {
+    if(this.skateboard.board) {
+    this.cart.push({"item": this.board});
+    }
+    if(this.skateboard.wheels) {
+      this.cart.push({"item": this.wheel});
+    }
+    if(this.skateboard.bearing) {
+      this.cart.push({"item": this.bearing});
+    }
+    if(this.skateboard.truck) {
+      this.cart.push({"item": this.truck});
+    }
+    if(this.skateboard.griptape) {
+      this.cart.push({"item": this.gripTape});
+    }
+  }
 
 
   buy()
