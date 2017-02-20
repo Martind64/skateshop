@@ -36,7 +36,7 @@ export class CartPage {
   {
     let alert = this.alertCtrl.create({
       title: 'Purchase completed',
-      message: 'You have purchased the following items ' + '<br>' + this.showItems(),
+      message: 'You have purchased the following items ' + '<br>' + this.displayItems(),
       buttons: [{
         text: 'ok',
         handler: () => {
@@ -67,7 +67,7 @@ export class CartPage {
     }
   }
 
-  showItems()
+  displayItems()
   {
     let items:string = "";
     if(this.board) {
